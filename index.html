@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="Dijora - اكتشف الكتب الإلكترونية والأدوات والقوالب الرقمية.">
+<title>Dijora | Digital Marketplace</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+    <a class="logo" href="#">Dijora<span>.</span></a>
+    <div class="header-actions">
+        <select id="language" aria-label="Language">
+            <option value="ar">العربية</option>
+            <option value="fr">Français</option>
+            <option value="en">English</option>
+        </select>
+        <button class="cart-button" id="cart-button">
+            <span id="cart-label">السلة</span>
+            <span class="cart-count" id="cart-count">0</span>
+        </button>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <span class="eyebrow" id="hero-eyebrow">عالمك الرقمي في مكان واحد</span>
+            <h1 id="hero-title">اكتشف منتجات رقمية<br><span>تستحق وقتك.</span></h1>
+            <p id="hero-description">كتب إلكترونية، أدوات ذكية، وقوالب تساعدك على التعلم والعمل والإبداع.</p>
+            <a href="#products" class="primary-button" id="hero-button">اكتشف المنتجات ←</a>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+            <div class="art-card art-card-back">Aa</div>
+            <div class="art-card art-card-front">
+                <span class="art-icon">✦</span>
+                <strong>Digital<br>Ideas</strong>
+                <span class="art-bottom">LEARN · CREATE · GROW</span>
+            </div>
+            <span class="floating-icon floating-one">📚</span>
+            <span class="floating-icon floating-two">✧</span>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <div><span>⚡</span><strong id="benefit-one">وصول رقمي</strong><small id="benefit-one-sub">منتجات رقمية</small></div>
+        <div><span>🔒</span><strong id="benefit-two">شراء آمن</strong><small id="benefit-two-sub">معاملات موثوقة</small></div>
+        <div><span>🌍</span><strong id="benefit-three">متجر عالمي</strong><small id="benefit-three-sub">ثلاث لغات</small></div>
+    </section>
+
+    <section class="products-section" id="products">
+        <div class="section-heading">
+            <div>
+                <span class="eyebrow" id="collection-label">تصفح المتجر</span>
+                <h2 id="products-title">اكتشف مجموعتنا</h2>
+            </div>
+            <span class="product-total" id="product-total">6 منتجات</span>
+        </div>
+
+        <div class="search-row">
+            <input type="search" id="search" placeholder="ابحث عن كتاب أو أداة..." aria-label="Search products">
+        </div>
+
+        <div class="categories" id="categories">
+            <button class="category active" data-category="all" id="cat-all">الكل</button>
+            <button class="category" data-category="books" id="cat-books">كتب إلكترونية</button>
+            <button class="category" data-category="tools" id="cat-tools">أدوات رقمية</button>
+            <button class="category" data-category="templates" id="cat-templates">قوالب</button>
+        </div>
+
+        <div class="product-grid" id="product-grid"></div>
+        <p class="empty-state" id="empty-state" hidden>لا توجد منتجات مطابقة لبحثك.</p>
+    </section>
+
+    <section class="seller-banner">
+        <div>
+            <span class="eyebrow" id="seller-eyebrow">للمبدعين وأصحاب المنتجات</span>
+            <h2 id="seller-title">لديك منتج رقمي؟<br>مكانك هنا.</h2>
+            <p id="seller-description">اكتشف فرص عرض منتجاتك الرقمية على Dijora.</p>
+        </div>
+        <button class="primary-button" id="seller-button">قريبًا: انضم كبائع</button>
+    </section>
+</main>
+
+<footer class="footer">
+    <a class="logo" href="#">Dijora<span>.</span></a>
+    <p id="footer-description">منتجات رقمية تلهم أفكارك.</p>
+    <small>© <span id="year"></span> Dijora</small>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<dialog id="cart-dialog" class="cart-dialog">
+    <div class="dialog-header">
+        <h2 id="dialog-title">سلة المشتريات</h2>
+        <button id="close-cart" class="close-button" aria-label="Close">✕</button>
+    </div>
+    <div id="cart-items"></div>
+    <div class="cart-total-row">
+        <strong id="total-label">الإجمالي</strong>
+        <strong id="cart-total">0 XAF</strong>
+    </div>
+    <button id="checkout-button" class="primary-button checkout-button">متابعة الطلب عبر WhatsApp</button>
+    <p class="checkout-note" id="checkout-note">نسخة تجريبية: لن يتم تحصيل أي مبلغ من خلال هذا الموقع.</p>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
